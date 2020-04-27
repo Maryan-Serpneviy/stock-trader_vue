@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Trade or view your portfolio</h1>
+    <h6>You may Save & Load your data</h6>
+    <h6>Click 'End day' to start a new day</h6>
+    <hr>
+    <p>Your credits: {{ credits }}</p>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+@Component
+export default class extends Vue {
+  get credits(): number {
+    return this.$store.getters.credits
   }
 }
 </script>
