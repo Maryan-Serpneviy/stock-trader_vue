@@ -51,7 +51,7 @@ export default class extends Vue {
   }
 
   get enoughCredits(): boolean {
-    return this.credits > this.stock.price * this.amount
+    return this.credits >= this.stock.price * this.amount
   }
 
   get inputBorder(): object | string {

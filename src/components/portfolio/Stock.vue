@@ -53,7 +53,7 @@ export default class extends Stock {
       amount: Number(this.amount)
     }
     this.$store.dispatch('sell', order)
-    this.amount = 0
+    this.amount = 1
   }
 }
 </script>

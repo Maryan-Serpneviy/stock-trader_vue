@@ -30,6 +30,7 @@ export default new Vuex.Store({
       exist
         ? exist.amount += payload.amount
         : state.portfolio.push(payload)
+      
       state.credits -= payload.price * payload.amount
     },
 
