@@ -84,6 +84,7 @@ export default class extends Vue {
         this.loading = false
       }
     } catch (err) {
+      this.loading = false
       console.error(err)
     }
   }
@@ -97,6 +98,7 @@ export default class extends Vue {
         this.loading = false
       }
     } catch (err) {
+      this.loading = false
       console.error(err)
     }
   }
