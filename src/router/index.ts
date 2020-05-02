@@ -9,17 +9,17 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
     path: '/portfolio',
-    name: 'Portfolio',
+    name: 'portfolio',
     component: Portfolio
   },
   {
     path: '/stocks',
-    name: 'Stocks',
+    name: 'stocks',
     component: Stocks
   }
 ]

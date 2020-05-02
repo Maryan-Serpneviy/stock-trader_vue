@@ -3,15 +3,15 @@
     <nav class="navbar navbar-default position-relative">
       <div class="container-fluid">
         <div class="navbar-header">
-          <router-link to="/" class="navbar-brand">Stock Trader</router-link>
+          <router-link :to="{ name: 'home' }" class="navbar-brand">Stock Trader</router-link>
         </div>
 
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <router-link to="/portfolio" tag="li" active-class="active">
+            <router-link :to="{ name: 'portfolio'}" tag="li" active-class="active">
               <a>Portfolio</a>
             </router-link>
-            <router-link to="/stocks" tag="li" active-class="active">
+            <router-link :to="{ name: 'stocks' }" tag="li" active-class="active">
               <a>Stocks</a>
             </router-link>
           </ul>
