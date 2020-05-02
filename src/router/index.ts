@@ -21,6 +21,12 @@ const routes: Array<RouteConfig> = [
     path: '/stocks',
     name: 'stocks',
     component: Stocks
+  },
+  {
+    path: '*',
+    redirect: {
+      name: 'home'
+    }
   }
 ]
 
