@@ -8,7 +8,6 @@
 </template>
 
 <style scoped lang="scss">
-
 $size: 80px;
 $color: #337ab7;
 

@@ -27,20 +27,22 @@ export default new Vuex.Store({
     buyStock(state, payload: IPortfolioStock) {
       const exist = state.portfolio.find(el => el.id === payload.id)
 
-      exist
-        ? exist.amount += payload.amount
-        : state.portfolio.push(payload)
-      
+      if (exist) {
+        exist.amount += payload.amount
+      } else {
+        state.portfolio.push(payload)
+      }
       state.credits -= payload.price * payload.amount
     },
 
     sellStock(state, payload: IPortfolioStock) {
       const exist = state.portfolio.find(el => el.id === payload.id)
 
-      exist.amount > payload.amount
-        ? exist.amount -= payload.amount
-        : state.portfolio.splice(state.portfolio.indexOf(exist), 1)
-
+      if (exist.amount > payload.amount) {
+        exist.amount -= payload.amount
+      } else {
+        state.portfolio.splice(state.portfolio.indexOf(exist), 1)
+      }
       state.credits += payload.price * payload.amount
     },
 
